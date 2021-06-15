@@ -1,0 +1,11 @@
+services:
+ database:
+  build: docker/
+  ports:
+   - '3306:3306'
+  environment:
+   - MYSQL_ROOT_PASSWORD=dev2021
+   - MYSQL_DATABASE=Vacine
+   - MYSQL_USER=dev2021
+  volumes:
+   - ./.volume/mysql/:/var/lib/mysql
